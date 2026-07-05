@@ -1,0 +1,82 @@
+.about {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: clamp(56px, 9vh, 110px) clamp(20px, 5vw, 72px);
+}
+
+/* Две колонки: биография слева, карточка фактов справа */
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bio p {
+  color: var(--fg-muted);
+  font-size: 16.5px;
+  line-height: 1.7;
+}
+
+.bio strong {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.facts {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.factsCaption {
+  font-family: var(--font-family-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+  margin-bottom: 16px;
+}
+
+.factsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.factRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.factRow:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.factRow dt {
+  color: var(--fg-muted);
+  font-size: 14.5px;
+}
+
+.factRow dd {
+  color: var(--fg);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-align: right;
+}

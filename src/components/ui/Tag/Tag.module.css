@@ -1,0 +1,22 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  /* по умолчанию — мятная пилюля */
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* Варианты статусов (секция «Книги») */
+.tag[data-variant="reading"] {
+  background: rgba(232, 184, 102, 0.13);
+  color: var(--status-reading);
+}
+
+.tag[data-variant="planned"] {
+  background: rgba(154, 160, 171, 0.12);
+  color: var(--status-planned);
+}

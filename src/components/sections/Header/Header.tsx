@@ -1,9 +1,16 @@
+import styles from "./Header.module.css";
+
 export function Header() {
   return (
-    <header>
-      <a href="#top">М. Воронов</a>
-      <nav aria-label="Основная навигация">
-        <ul>
+    <header className={styles.header}>
+      <a href="#top" className={styles.logo}>
+        <span className={styles.logoMark} aria-hidden="true">
+          {"</>"}
+        </span>
+        М. Воронов
+      </a>
+      <nav aria-label="Основная навигация" className={styles.nav}>
+        <ul className={styles.list}>
           <li>
             <a href="#about">Обо мне</a>
           </li>
@@ -21,7 +28,9 @@ export function Header() {
           </li>
         </ul>
       </nav>
-      <a href="#contact">Связаться</a>
+      <a href="#contact" className={styles.cta}>
+        Связаться
+      </a>
     </header>
   );
 }

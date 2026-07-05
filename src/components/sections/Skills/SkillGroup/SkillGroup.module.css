@@ -1,0 +1,18 @@
+.group {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.016);
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}

@@ -1,0 +1,59 @@
+.skills {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: clamp(56px, 9vh, 110px) clamp(20px, 5vw, 72px);
+}
+
+/* Сетка групп: сами подстраивают число колонок под ширину */
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Блоки друг под другом */
+.extra {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.block {
+  border: 1px solid var(--accent-border);
+  border-radius: 18px;
+  padding: 24px;
+  /* мятный градиент сверху вниз, затухающий в прозрачность */
+  background: linear-gradient(180deg, var(--accent-soft), rgba(255, 255, 255, 0.01));
+}
+
+.learnIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.blockTitle {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.blockDesc {
+  color: var(--fg-muted);
+  font-size: 14.5px;
+  margin-bottom: 16px;
+}
+
+.blockList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
