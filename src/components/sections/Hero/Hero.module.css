@@ -1,19 +1,22 @@
 .hero {
+  padding-block: clamp(72px, 13vh, 150px);
+}
+
+.inner {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 22px;
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: clamp(72px, 13vh, 150px) clamp(20px, 5vw, 72px);
+  padding-inline: clamp(20px, 5vw, 72px);
 }
 
 /* ===== Фоновые свечения ===== */
-.hero::before,
-.hero::after {
+.inner::before,
+.inner::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -23,16 +26,20 @@
 }
 
 /* мятное пятно сверху-слева */
-.hero::before {
+.inner::before {
   top: -140px;
   left: -120px;
   width: 520px;
   height: 520px;
-  background: radial-gradient(circle, rgba(95, 220, 176, 0.42), transparent 66%);
+  background: radial-gradient(
+    circle,
+    rgba(95, 220, 176, 0.42),
+    transparent 66%
+  );
 }
 
 /* голубоватое пятно справа */
-.hero::after {
+.inner::after {
   top: 20px;
   right: -100px;
   width: 460px;

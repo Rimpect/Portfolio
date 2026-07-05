@@ -38,6 +38,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* обрезаем горизонтальный вылет декора (напр. свечений Hero) без поломки sticky */
+  overflow-x: clip;
 }
 
 body {

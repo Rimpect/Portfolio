@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/ui/SectionHeading/SectionHeading";
 import { BookCard } from "./BookCard/BookCard";
 import styles from "./Books.module.css";
-import { books } from "./MockDataBooks";
+import { books } from "@/data/resume";
 
 export function Books() {
   return (
@@ -17,7 +17,10 @@ export function Books() {
       </p>
 
       <div className={styles.filters}>
-        <button type="button" className={`${styles.filter} ${styles.filterActive}`}>
+        <button
+          type="button"
+          className={`${styles.filter} ${styles.filterActive}`}
+        >
           Все
         </button>
         <button type="button" className={styles.filter}>

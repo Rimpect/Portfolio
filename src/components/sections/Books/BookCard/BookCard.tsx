@@ -1,5 +1,5 @@
 import { Tag } from "@/components/ui/Tag/Tag";
-import type { BookStatus } from "../MockDataBooks";
+import type { BookStatus } from "@/data/resume";
 import styles from "./BookCard.module.css";
 
 const STATUS_LABEL: Record<BookStatus, string> = {
@@ -15,7 +15,12 @@ interface BookCardProps {
   description: string;
 }
 
-export function BookCard({ category, title, description, status }: BookCardProps) {
+export function BookCard({
+  category,
+  title,
+  description,
+  status,
+}: BookCardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.top}>
