@@ -1,0 +1,43 @@
+.item {
+  position: relative;
+}
+
+/* Точка на линии таймлайна — по умолчанию «полая» */
+.item::before {
+  content: "";
+  position: absolute;
+  left: -37px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  /* «вырез» цветом фона, чтобы линия не просвечивала сквозь точку */
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+/* Только у ПЕРВОГО пункта точка залита мятным */
+.item:first-child::before {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.date {
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: var(--fg-muted);
+}
+
+.title {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.note {
+  max-width: 620px;
+  color: var(--fg-muted);
+  font-size: 14.5px;
+  line-height: 1.6;
+}

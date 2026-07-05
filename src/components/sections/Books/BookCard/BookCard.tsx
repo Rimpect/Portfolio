@@ -1,5 +1,6 @@
 import { Tag } from "@/components/ui/Tag/Tag";
 import type { BookStatus } from "../MockDataBooks";
+import styles from "./BookCard.module.css";
 
 const STATUS_LABEL: Record<BookStatus, string> = {
   done: "Изучено",
@@ -16,11 +17,13 @@ interface BookCardProps {
 
 export function BookCard({ category, title, description, status }: BookCardProps) {
   return (
-    <article>
-      <Tag variant={status}>{STATUS_LABEL[status]}</Tag>
-      <Tag>{category}</Tag>
-      <h3>{title}</h3>
-      <p>{description}</p>
+    <article className={styles.card}>
+      <div className={styles.top}>
+        <Tag variant={status}>{STATUS_LABEL[status]}</Tag>
+        <span className={styles.category}>{category}</span>
+      </div>
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.note}>{description}</p>
     </article>
   );
 }

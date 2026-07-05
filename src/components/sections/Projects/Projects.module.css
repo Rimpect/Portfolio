@@ -1,0 +1,11 @@
+.projects {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: clamp(56px, 9vh, 110px) clamp(20px, 5vw, 72px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  gap: 22px;
+}

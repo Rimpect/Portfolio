@@ -14,8 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Максим Воронов — Frontend-разработчик",
-  description:
-    "Резюме frontend-разработчика: React, TypeScript, вёрстка, доступность.",
+  description: "Резюме frontend-разработчика: React, TypeScript, вёрстка, доступность.",
 };
 
 export default function RootLayout({

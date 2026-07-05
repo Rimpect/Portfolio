@@ -1,0 +1,15 @@
+.experience {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: clamp(56px, 9vh, 110px) clamp(20px, 5vw, 72px);
+}
+
+/* Вертикальная линия таймлайна */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-left: 30px;
+  border-left: 1px solid var(--border-strong);
+}

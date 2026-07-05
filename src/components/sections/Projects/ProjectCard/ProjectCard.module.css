@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.016);
+  overflow: hidden; /* чтобы скриншот обрезался по скруглению */
+}
+
+/* Плейсхолдер под скриншот (позже — next/image) */
+.screenshot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  color: #6b6f79;
+  font-size: 12px;
+  font-family: var(--font-family-mono);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.description {
+  color: var(--fg-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.demo,
+.github {
+  font-size: 13.5px;
+  font-weight: 600;
+  transition:
+    color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.demo {
+  color: var(--accent);
+}
+
+.demo:hover {
+  opacity: 0.8;
+}
+
+.github {
+  color: var(--fg-muted);
+}
+
+.github:hover {
+  color: var(--fg);
+}

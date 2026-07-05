@@ -1,7 +1,7 @@
 import { SectionHeading } from "@/components/ui/SectionHeading/SectionHeading";
 import { Tag } from "@/components/ui/Tag/Tag";
-import styles from "./Skills.module.css";
 import { SkillGroup } from "./SkillGroup/SkillGroup";
+import styles from "./Skills.module.css";
 
 export function Skills() {
   return (
@@ -14,16 +14,17 @@ export function Skills() {
           title="Вёрстка и стили"
           items={["HTML5", "CSS3", "SCSS / Sass", "CSS Modules", "Tailwind"]}
         />
-        <SkillGroup title="Фреймворки" items={["React", "React Router", "Redux Toolkit", "Zustand"]} />
+        <SkillGroup
+          title="Фреймворки"
+          items={["React", "React Router", "Redux Toolkit", "Zustand"]}
+        />
         <SkillGroup title="Инструменты" items={["Git / GitHub", "Vite", "Figma", "REST API"]} />
       </div>
 
       <div className={styles.extra}>
         <div className={styles.block}>
           <h3 className={styles.blockTitle}>Подход к коду</h3>
-          <p className={styles.blockDesc}>
-            не только «пишу код», но и думаю о структуре и защите
-          </p>
+          <p className={styles.blockDesc}>не только «пишу код», но и думаю о структуре и защите</p>
           <ul className={styles.blockList}>
             <li>
               <Tag>Архитектура компонентов</Tag>

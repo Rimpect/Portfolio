@@ -1,0 +1,72 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: var(--content-width);
+  margin: 48px auto 0;
+  padding: 28px clamp(20px, 5vw, 72px);
+  border-top: 1px solid var(--border);
+}
+
+/* Левая часть: марка </> + копирайт */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--font-family-mono);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.copyright {
+  color: var(--fg-muted);
+  font-size: 14px;
+}
+
+/* Правая часть: соцсети + «Наверх» */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.socials {
+  display: flex;
+  gap: 22px;
+}
+
+.socials a {
+  color: var(--fg-muted);
+  font-size: 14px;
+  transition: color 0.15s ease;
+}
+
+.socials a:hover {
+  color: var(--fg);
+}
+
+.toTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--fg-muted);
+  font-size: 14px;
+  transition: color 0.15s ease;
+}
+
+.toTop:hover {
+  color: var(--fg);
+}
