@@ -13,8 +13,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rimpect.github.io/Portfolio/"),
-  
+  // только домен: подпапку /Portfolio к путям ассетов добавит basePath
+  metadataBase: new URL("https://rimpect.github.io/"),
+
   title: "Максим Воронов — Frontend-разработчик",
   description:
     "Резюме frontend-разработчика: React, TypeScript, вёрстка, доступность.",
