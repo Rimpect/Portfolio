@@ -1,9 +1,11 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import styles from "./ScrollToTop.module.css";
+
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -18,6 +20,7 @@ export function ScrollToTop() {
     }
     return () => observer.disconnect();
   }, []);
+
   return (
     <div>
       <div ref={ref} aria-hidden="true" />

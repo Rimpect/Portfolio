@@ -13,8 +13,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rimpect.github.io/Portfolio/"),
+  
   title: "Максим Воронов — Frontend-разработчик",
-  description: "Резюме frontend-разработчика: React, TypeScript, вёрстка, доступность.",
+  description:
+    "Резюме frontend-разработчика: React, TypeScript, вёрстка, доступность.",
+
+  openGraph: {
+    title: "Максим Воронов — Frontend-разработчик",
+    description:
+      "Резюме frontend-разработчика: React, TypeScript, вёрстка, доступность.",
+    url: "https://rimpect.github.io/Portfolio/",
+    siteName: "Portfolio",
+    locale: "ru_RU",
+    type: "website",
+  },
+
+  authors: [{ name: "Максим Воронов" }],
 };
 
 export default function RootLayout({
