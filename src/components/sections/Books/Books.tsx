@@ -1,7 +1,6 @@
 import { SectionHeading } from "@/components/ui/SectionHeading/SectionHeading";
-import { BookCard } from "./BookCard/BookCard";
+import { BookShelf } from "./BookShelf/BookShelf";
 import styles from "./Books.module.css";
-import { books } from "@/data/resume";
 
 export function Books() {
   return (
@@ -15,36 +14,7 @@ export function Books() {
       <p className={styles.description}>
         Читаю по фронтенду, архитектуре и безопасности. Отфильтруйте по статусу.
       </p>
-
-      <div className={styles.filters}>
-        <button
-          type="button"
-          className={`${styles.filter} ${styles.filterActive}`}
-        >
-          Все
-        </button>
-        <button type="button" className={styles.filter}>
-          Изучено
-        </button>
-        <button type="button" className={styles.filter}>
-          Изучаю
-        </button>
-        <button type="button" className={styles.filter}>
-          В планах
-        </button>
-      </div>
-
-      <div className={styles.grid}>
-        {books.map((book) => (
-          <BookCard
-            key={book.id}
-            category={book.category}
-            title={book.title}
-            status={book.status}
-            description={book.note}
-          />
-        ))}
-      </div>
+      <BookShelf />
     </section>
   );
 }
