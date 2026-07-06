@@ -2,6 +2,8 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
+
 // Мета для картинки: alt-текст и размеры (стандарт OG — 1200×630)
 export const alt = "Максим Воронов — Frontend-разработчик";
 export const size = { width: 1200, height: 630 };
