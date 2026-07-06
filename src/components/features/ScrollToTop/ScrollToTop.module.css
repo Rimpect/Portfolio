@@ -1,0 +1,52 @@
+.toTop {
+  position: fixed;
+  right: clamp(16px, 4vw, 32px);
+  bottom: clamp(16px, 4vw, 32px);
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  /* спрятано по умолчанию: прозрачно, чуть ниже, не ловит клики */
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+/* прокрутилось ниже первого экрана — наблюдатель ставит data-visible="true" */
+.toTop[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.toTop:hover {
+  background: var(--accent);
+  color: #08130e;
+  border-color: var(--accent);
+}
+
+/* лёгкое проявление */
+@media (prefers-reduced-motion: reduce) {
+  .toTop,
+  .toTop[data-visible="true"] {
+    transform: none;
+    transition:
+      opacity 0.2s ease,
+      background 0.15s ease,
+      color 0.15s ease;
+  }
+}

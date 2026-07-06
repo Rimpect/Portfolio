@@ -57,16 +57,3 @@
 .socials a:hover {
   color: var(--fg);
 }
-
-.toTop {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--fg-muted);
-  font-size: 14px;
-  transition: color 0.15s ease;
-}
-
-.toTop:hover {
-  color: var(--fg);
-}

@@ -107,8 +107,7 @@ export const projects = [
   {
     id: 1,
     title: "TaskFlow",
-    description:
-      "Канбан-менеджер задач с drag & drop, тёмной темой и сохранением в localStorage.",
+    description: "Канбан-менеджер задач с drag & drop, тёмной темой и сохранением в localStorage.",
     stacks: ["React", "TypeScript", "DnD"],
     demoHref: "#",
     githubHref: "#",
@@ -117,8 +116,7 @@ export const projects = [
   {
     id: 2,
     title: "Погода сейчас",
-    description:
-      "Приложение для отображения текущей погоды в выбранном городе.",
+    description: "Приложение для отображения текущей погоды в выбранном городе.",
     stacks: ["React", "TypeScript", "OpenWeather API"],
     demoHref: "#",
     githubHref: "#",
@@ -149,8 +147,7 @@ export const experience = [
     startYear: 2021,
     endYear: 2023,
     title: "Курс «Frontend-разработчик",
-    description:
-      "Участвовал в разработке веб-приложений, изучал современные технологии фронтенда.",
+    description: "Участвовал в разработке веб-приложений, изучал современные технологии фронтенда.",
   },
   {
     id: 3,
@@ -158,5 +155,28 @@ export const experience = [
     title: "Фриланс, вёрстка и мелкие SPA",
     description:
       "Работаю над проектами на React и TypeScript, создаю интерфейсы и взаимодействую с REST API.",
+  },
+];
+
+export const header = [
+  {
+    reference: "#about",
+    label: "Обо мне",
+  },
+  {
+    reference: "#skills",
+    label: "Навыки",
+  },
+  {
+    reference: "#projects",
+    label: "Проекты",
+  },
+  {
+    reference: "#experience",
+    label: "Опыт",
+  },
+  {
+    reference: "#books",
+    label: "Книги",
   },
 ];

@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/features/Reveal/Reveal";
+import { ScrollToTop } from "@/components/features/ScrollToTop/ScrollToTop";
 import { About } from "@/components/sections/About/About";
 import { Books } from "@/components/sections/Books/Books";
 import { Contact } from "@/components/sections/Contact/Contact";
@@ -13,13 +15,26 @@ export default function Home() {
     <>
       <Header />
       <main>
+        <ScrollToTop />
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Books />
-        <Contact />
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Experience />
+        </Reveal>
+        <Reveal>
+          <Books />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
     </>

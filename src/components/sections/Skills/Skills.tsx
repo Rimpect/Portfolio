@@ -1,21 +1,13 @@
 import { SectionHeading } from "@/components/ui/SectionHeading/SectionHeading";
 import { Tag } from "@/components/ui/Tag/Tag";
+import { stack } from "@/data/resume";
 import { SkillGroup } from "./SkillGroup/SkillGroup";
 import styles from "./Skills.module.css";
-import { stack } from "@/data/resume";
 
 export function Skills() {
   return (
-    <section
-      id="skills"
-      aria-labelledby="skills-title"
-      className={styles.skills}
-    >
-      <SectionHeading
-        eyebrow="// стек"
-        title="Чем я пользуюсь каждый день"
-        id="skills-title"
-      />
+    <section id="skills" aria-labelledby="skills-title" className={styles.skills}>
+      <SectionHeading eyebrow="// стек" title="Чем я пользуюсь каждый день" id="skills-title" />
 
       <div className={styles.groups}>
         {stack.map(({ category, items }) => (
@@ -26,9 +18,7 @@ export function Skills() {
       <div className={styles.extra}>
         <div className={styles.block}>
           <h3 className={styles.blockTitle}>Подход к коду</h3>
-          <p className={styles.blockDesc}>
-            не только «пишу код», но и думаю о структуре и защите
-          </p>
+          <p className={styles.blockDesc}>не только «пишу код», но и думаю о структуре и защите</p>
           <ul className={styles.blockList}>
             <li>
               <Tag>Архитектура компонентов</Tag>

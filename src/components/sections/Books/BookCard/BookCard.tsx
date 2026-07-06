@@ -15,12 +15,7 @@ interface BookCardProps {
   description: string;
 }
 
-export function BookCard({
-  category,
-  title,
-  description,
-  status,
-}: BookCardProps) {
+export function BookCard({ category, title, description, status }: BookCardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.top}>

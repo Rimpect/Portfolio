@@ -13,20 +13,24 @@ export function Footer() {
       <div className={styles.right}>
         <ul className={styles.socials}>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://t.me/username">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://t.me/username"
+            >
               Telegram
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/username">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/username"
+            >
               GitHub
             </a>
           </li>
         </ul>
-
-        <a href="#top" className={styles.toTop}>
-          Наверх <span aria-hidden="true">↑</span>
-        </a>
       </div>
     </footer>
   );
