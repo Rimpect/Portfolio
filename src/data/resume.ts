@@ -55,7 +55,7 @@ export const heroSection = {
   description:
     "Junior-разработчик из Костромы. Верстаю адаптивные интерфейсы на React + TypeScript / React + JavaScript, слежу за чистотой кода и деталями. Готов расти в сильной команде.",
   stats: [
-    { value: "полгода года", label: "пишу на TypeScript" },
+    { value: "полгода", label: "пишу на TypeScript" },
     { value: "6+", label: "пет-проектов на GitHub" },
     { value: "React·TS", label: "основной стек" },
   ],
