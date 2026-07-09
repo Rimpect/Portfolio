@@ -1,3 +1,5 @@
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import { Tag } from "@/components/ui/Tag/Tag";
 import styles from "./ProjectCard.module.css";
 
@@ -7,7 +9,7 @@ interface ProjectCardProps {
   stacks: string[];
   demoHref: string;
   githubHref: string;
-  screenshotLabel: string;
+  screenshot: StaticImageData;
 }
 
 export function ProjectCard({
@@ -16,12 +18,17 @@ export function ProjectCard({
   stacks,
   demoHref,
   githubHref,
-  screenshotLabel,
+  screenshot,
 }: ProjectCardProps) {
   return (
     <article className={styles.card}>
-      <div className={styles.screenshot} aria-hidden="true">
-        {screenshotLabel}
+      <div className={styles.screenshot}>
+        <Image
+          src={screenshot}
+          alt={`Скриншот проекта ${title}`}
+          fill
+          sizes="(max-width: 900px) 100vw, 380px"
+        />
       </div>
       <div className={styles.body}>
         <h3 className={styles.title}>{title}</h3>

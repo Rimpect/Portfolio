@@ -7,17 +7,16 @@
   overflow: hidden; /* чтобы скриншот обрезался по скруглению */
 }
 
-/* Плейсхолдер под скриншот (позже — next/image) */
+/* Контейнер под скриншот: position:relative нужен для <Image fill> */
 .screenshot {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   aspect-ratio: 16 / 10;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  color: #6b6f79;
-  font-size: 12px;
-  font-family: var(--font-family-mono);
+}
+
+.screenshot img {
+  object-fit: cover;
 }
 
 .body {

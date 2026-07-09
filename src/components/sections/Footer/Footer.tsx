@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import { links } from "@/data/resume";
 
 export function Footer() {
   return (
@@ -12,24 +13,13 @@ export function Footer() {
 
       <div className={styles.right}>
         <ul className={styles.socials}>
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://t.me/username"
-            >
-              Telegram
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/username"
-            >
-              GitHub
-            </a>
-          </li>
+          {links.map(({ label, href }) => (
+            <li key={label}>
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>

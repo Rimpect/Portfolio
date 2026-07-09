@@ -26,7 +26,11 @@ export function Hero() {
           <a href="#projects" className={styles.btnPrimary}>
             Смотреть проекты →
           </a>
-          <a href="/cv.pdf" download className={styles.btnSecondary}>
+          <a
+            href="/Portfolio/CV.pdf"
+            download="Максим_Воронов_CV.pdf"
+            className={styles.btnSecondary}
+          >
             Скачать CV
           </a>
         </div>

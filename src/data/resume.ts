@@ -1,3 +1,6 @@
+import QuizPlatform from "./screenshots/QuizPlatform.png";
+import snippet from "./screenshots/snippet.png";
+
 export type BookStatus = "done" | "reading" | "planned";
 
 export interface Book {
@@ -50,10 +53,10 @@ export const heroSection = {
   name: "Максим Воронов",
   role: "Frontend-разработчик",
   description:
-    "Junior-разработчик из Москвы. Верстаю адаптивные интерфейсы на React + TypeScript, слежу за чистотой кода и деталями. Готов расти в сильной команде.",
+    "Junior-разработчик из Костромы. Верстаю адаптивные интерфейсы на React + TypeScript / React + JavaScript, слежу за чистотой кода и деталями. Готов расти в сильной команде.",
   stats: [
-    { value: "1.5 года", label: "пишу на JavaScript" },
-    { value: "12+", label: "пет-проектов на GitHub" },
+    { value: "полгода года", label: "пишу на TypeScript" },
+    { value: "6+", label: "пет-проектов на GitHub" },
     { value: "React·TS", label: "основной стек" },
   ],
   loves: [
@@ -68,7 +71,7 @@ export const heroSection = {
 export const facts = [
   {
     label: "Локация",
-    value: "Москва / удалёнка",
+    value: "Кострома / удалёнка",
   },
   {
     label: "Формат",
@@ -106,53 +109,46 @@ export const stack = [
 export const projects = [
   {
     id: 1,
-    title: "TaskFlow",
-    description: "Канбан-менеджер задач с drag & drop, тёмной темой и сохранением в localStorage.",
-    stacks: ["React", "TypeScript", "DnD"],
-    demoHref: "#",
-    githubHref: "#",
-    screenshotLabel: "скриншот · TaskFlow",
+    title: "Платформа для проведения квизов",
+    description:
+      "Платформа для проведения квизов с реализованной системой античитинга",
+    stacks: ["React", "JavaScript", "Vite", "Python", "PostgreSQL"],
+    demoHref: "https://rimpect.github.io/The-Quiz-Platform/",
+    githubHref: "https://github.com/Rimpect/The-Quiz-Platform",
+    screenshot: QuizPlatform,
   },
   {
     id: 2,
-    title: "Погода сейчас",
-    description: "Приложение для отображения текущей погоды в выбранном городе.",
-    stacks: ["React", "TypeScript", "OpenWeather API"],
-    demoHref: "#",
-    githubHref: "#",
-    screenshotLabel: "скриншот · Погода сейчас",
-  },
-  {
-    id: 3,
-    title: "Магазин-лендинг",
+    title: "Менеджер сниппетов",
     description:
-      "Лендинг для интернет-магазина с адаптивным дизайном и интеграцией платежных систем.",
-    stacks: ["React", "TypeScript", "Stripe API"],
-    demoHref: "#",
-    githubHref: "#",
-    screenshotLabel: "скриншот · Магазин-лендинг",
+      "Приложение для сохранения и редактирования сниппетов (часто переиспользуемых частей кода).",
+    stacks: ["React", "JavaScript", "Vite", "localStorage"],
+    demoHref: "https://rimpect.github.io/CodeSnippetManager/",
+    githubHref: "https://github.com/Rimpect/CodeSnippetManager",
+    screenshot: snippet,
   },
 ];
 
 export const experience = [
   {
     id: 1,
-    startYear: 2019,
-    title: "Обучение в университете",
-    description:
-      "Изучал основы программирования, алгоритмы и структуры данных, участвовал в проектах по разработке ПО.",
+    startYear: 2021,
+    endYear: 2022,
+    title: "Обучение в школе",
+    description: "Изучал основы веб разработки",
   },
   {
     id: 2,
-    startYear: 2021,
-    endYear: 2023,
-    title: "Курс «Frontend-разработчик",
-    description: "Участвовал в разработке веб-приложений, изучал современные технологии фронтенда.",
+    startYear: 2022,
+    endYear: 2026,
+    title: "Обучение в вузе КГУ",
+    description:
+      "Участвовал в разработке веб-приложений в том числе и в интенсивах, изучал современные технологии фронтенда.",
   },
   {
     id: 3,
-    startYear: 2023,
-    title: "Фриланс, вёрстка и мелкие SPA",
+    startYear: 2026,
+    title: "Изучаю Fullstack разработку",
     description:
       "Работаю над проектами на React и TypeScript, создаю интерфейсы и взаимодействую с REST API.",
   },
@@ -178,5 +174,20 @@ export const header = [
   {
     reference: "#books",
     label: "Книги",
+  },
+];
+
+export const links = [
+  // { label: "Email", href: "mailto:maksimvoronov789@gmail.com", primary: true }, лучше но если нет почтового сервиса, то ничего не происходит
+  {
+    label: "Email",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=maksimvoronov789@gmail.com",
+    primary: true,
+  },
+  { label: "GitHub", href: "https://github.com/Rimpect" },
+  { label: "Telegram", href: "https://t.me/Maxim_just_du_it" },
+  {
+    label: "hh.ru",
+    href: "https://kostroma.hh.ru/resume/94482447ff0cfb53f30039ed1f777179534947",
   },
 ];
